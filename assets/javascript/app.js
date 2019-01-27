@@ -10,9 +10,9 @@ var trivia = {
   questionsArray: [
                   "Who was the first actor to portray James Bond on screen?", "The phrase 'cul-de-sac' literally translates to what?", "The asian delicacy known as 'bird's nest soup' is made from what?", "Which Robin Williams movie was based on a novel?", "What is the offical currency of China?"],
   answerArray: [
-                ["Barry Nelson", "Sean Connery", "Pierce Brosnan", "Timothy Dalton"], ["end of the line", "top of the peak", "bottom of the bag", "dead-end"], ["fried noodles", "bird's nests", "cabbage", "vegetables"], ["Dead Poets Scociety", "Good Morning, Vietnam", "Mrs. Doubtfire", "Patch Adams"], ["Renminbi", "Yen", "Chinese Dollar", "Yuan"],],
+                ["Barry Nelson", "Sean Connery", "Pierce Brosnan", "Timothy Dalton"], ["end of the line", "top of the peak", "bottom of the bag", "dead-end"], ["fried noodles", "birds' nests", "cabbage", "vegetables"], ["Dead Poets Scociety", "Good Morning, Vietnam", "Mrs. Doubtfire", "Patch Adams"], ["Renminbi", "Yen", "Chinese Dollar", "Yuan"],],
   correctAnswers: [
-                "A. Barry Nelson", "C. bottom of the bag", "B. bird's nests", "C. Mrs. Doubtfire", "A. Renminbi"],
+                "A. Barry Nelson", "C. bottom of the bag", "B. birds' nests", "C. Mrs. Doubtfire", "A. Renminbi"],
   imageArray: [
               "<img class='center-block img-right' src='assets/images/westelm-printed-petals-mobile.jpg'>", "<img class='center-block img-right' src='assets/images/westelm-brushstroke-floral-mobile.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-tropical-leaves-desktop-wallpaper.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-pink-flower-wallpaper-mobile-1.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-shadow-blossom-mobile.jpg'>"],
   clock: "",
