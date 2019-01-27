@@ -10,9 +10,9 @@ var trivia = {
   questionsArray: [
                   "Who was the first actor to portray James Bond on screen?", "The phrase 'cul-de-sac' literally translates to what?", "The asian delicacy known as 'bird's nest soup' is made from what?", "Which Robin Williams movie was based on a novel?", "What is the offical currency of China?"],
   answerArray: [
-                ["Barry Nelson", "Sean Connery", "Pierce Brosnan", "Timothy Dalton"], ["end of the line", "top of the peak", "bottom of the bag"], ["fried noodles", "bird' nests", "cabbage"], ["Dead Poets Scociety", "Good Morning, Vietnam", "Mrs. Doubtfire"], ["Renminbi", "Yen", "Chinese Dollar", "Yuan"],],
+                ["Barry Nelson", "Sean Connery", "Pierce Brosnan", "Timothy Dalton"], ["end of the line", "top of the peak", "bottom of the bag", "dead-end"], ["fried noodles", "bird's nests", "cabbage", "vegetables"], ["Dead Poets Scociety", "Good Morning, Vietnam", "Mrs. Doubtfire", "Patch Adams"], ["Renminbi", "Yen", "Chinese Dollar", "Yuan"],],
   correctAnswers: [
-                "Barry Nelson", "bottom of the bag", "birds' nests", "Mrs. Doubtfire", "Renminbi"],
+                "A. Barry Nelson", "C. bottom of the bag", "B. bird's nests", "C. Mrs. Doubtfire", "A. Renminbi"],
   imageArray: [
               "<img class='center-block img-right' src='assets/images/westelm-printed-petals-mobile.jpg'>", "<img class='center-block img-right' src='assets/images/westelm-brushstroke-floral-mobile.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-tropical-leaves-desktop-wallpaper.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-pink-flower-wallpaper-mobile-1.jpg'>", "<img class='center-block img-right' src='assets/images/west-elm-shadow-blossom-mobile.jpg'>"],
   clock: "",
@@ -28,21 +28,20 @@ function startScreen(){
   
 };
 
-console.log (startScreen);
-
- var timer = {
-   start: function(){
-  counter = setInterval(timeProgress.count,1000);
-},
-stop: function(){
-  clearInterval(counter);
-  time = 0;
-},
-count: function(){
-  time++;
-  console.log(time);
-}
+function timer(){
+  trivia.clock = setInterval(twentySeconds, 1000);
+  function twentySeconds(){
+    if(trivia.timeCounter === 0){
+      timeOutLoss();
+      clearInterval(trivia.clock);
+    }
+    if(trivia.timeCounter > 0) {
+      trivia.timeCounter --;
+    }
+    $(".timer").html(trivia.timeCounter);
+  }
 };
+  
 
 function wait(){
   if(trivia.questionCounter < 4) {
